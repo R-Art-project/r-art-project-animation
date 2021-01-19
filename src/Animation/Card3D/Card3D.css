@@ -1,6 +1,6 @@
 .CardContainer{
-    width: 200px;
-    height: 260px;
+    width: 350px;
+    height: 225px;
     margin: 40px 0;
     perspective: 600px;
     padding: 10px;
@@ -8,6 +8,7 @@
 
 .Card {
     position: relative;
+    margin-left: 100px;
     width: 100%;
     height: 100%;
     cursor: pointer;
@@ -23,7 +24,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    line-height: 260px;
+    /* line-height: 360px; */
     color: white;
     text-align: center;
     font-weight: bold;
@@ -31,12 +32,23 @@
     backface-visibility: hidden;
 }
 .card__face--front {
-    background-color: red;
-    border-radius: 10px;
-    
+    border-radius: 15px;   
+    box-shadow: 9px 5px 12px 1px rgba(0, 0, 0, 0.25);
+}
+.card__face--front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;  
 }
 .card__face--back {
-    background-color: green;
     transform: rotateY(180deg);
     border-radius: 10px;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+}
+.card__face--back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;  
 }
